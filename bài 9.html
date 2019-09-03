@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="In giá trị" onclick="tinhtoan()">
+<script>
+function tinhtoan() {
+    let mang = [235, -339, 175, 678, 573];
+    let mang2 = []
+    let dem =0;
+    for (let i = 1; i < mang.length; i++) {
+        let so = Math.abs(mang[i]);
+        while (so > 1) {
+            let trunggian = so % 10;
+            so = (so - (so % 10)) / 10;
+            if (trunggian % 2 == 0) {
+               dem++;}
+        }
+        if (dem==0){
+        mang2.push(mang[i]);}
+        dem=0;
+    }
+     let max = mang2[0];
+    for ( let i=1;i<mang2.length;i++){
+         if( max<mang2[i]){
+             max= mang2[i];}
+}
+document.write("Số cần tìm là : "+max);
+}
+</script>
+</body>
+</html>

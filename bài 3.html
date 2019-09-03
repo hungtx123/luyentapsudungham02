@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>-8
+</head>
+<body>
+Nhập số N:
+<input type="text" id="input">
+<input type="button" value="In giá trị" onclick="tinhtoan()">
+<script>
+    function tinhtoan() {
+        let input = document.getElementById("input").value;
+        let a=3;
+        let dem=0;
+        while (input <0){
+            alert("Nhập lại!");
+            return;
+        }
+        document.write(" 2 ");
+        while (a < input) {
+            dem = 0;
+            for (let i = 2; i <= Math.sqrt(a); i++) {
+                if (a % i == 0) {
+                    dem++;
+                    break;
+                }
+            }
+            if (dem == 0) {
+                document.write(" " + a);
+            }
+            a++;
+        }
+    }
+
+</script>
+</body>
+</html>

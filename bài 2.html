@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số thứ nhất:
+<input type="text" id="input">
+Nhập số thứ hai:
+<input type="text" id="input2">
+<input type="button" value="Tính toán" onclick="tinhtoan()">
+<script>
+    function tinhtoan() {
+        let dem=0;
+        let UCLN=0;
+        let input = document.getElementById("input").value;
+        let input2 = document.getElementById("input2").value;
+        while (input <0 || input2 <0){
+            alert("Nhập lại!");
+            return;
+        }
+        if( input>input2){
+            i=input;
+        }
+        else i=input2;
+         while (dem==0){
+         if ( i%input==0 && i%input2==0){
+             dem++;
+         }
+         else i++;}
+         document.write("BCNN của 2 số "+input+" và "+input2+ " là: "+ i +"<br>");
+        if( input>input2){
+            i=input2;
+        }
+        else i=input;
+        for (let k=1;k<=i;k++) {
+            if (input%k == 0 && input2%k == 0) {
+               UCLN = k;
+            }
+        }
+            document.write("UCLN của 2 số "+input+" và "+input2+ " là: "+UCLN);
+    }
+</script>
+</body>
+</html>

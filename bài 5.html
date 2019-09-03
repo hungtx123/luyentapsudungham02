@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập quãng đường:
+<input type="text" id="input">
+<input type="button" value="In giá trị" onclick="tinhtoan()">
+<script>
+    function tinhtoan() {
+        let input = document.getElementById("input").value;
+        let a=3;
+        let sum=5000;
+        while (input <0){
+            alert("Nhập lại!");
+            return;
+        }
+        if( input <=1){
+            document.write(sum);
+        }
+        else if( input<=30){
+            sum+=(input-1)*4000;
+        }
+        else if (input>30){
+        sum+= 29*4000+(input-30)*3000;
+        }
+        document.write("Số tiến cần phải trả: "+sum);
+    }
+</script>
+</body>
+</html>

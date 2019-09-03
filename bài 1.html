@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <input type="text" id="input">
+        <input type="button" value="Tính tổng" onclick="tinhtoan()">
+        <input type="text" id="output">
+        <script>
+        function tinhtoan() {
+            let sum=0;
+            let input = document.getElementById("input").value;
+            while (input <0){
+                alert("Nhập lại!");
+                return;
+            }
+            for (let i = 1; i <= input ; i++) {
+                sum+=i; }
+                    document.getElementById("output").value = sum;
+        }
+        </script>
+
+</body>
+</html>
